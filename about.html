@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+/* unvisited link */
+a:link {
+    color: blue;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: lightblue;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: darkblue;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+</style>
+</head>
+<body>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Tapir Time</a>
+  <a href="javascript:void(0)" onclick="w3_closeTwo()"
+  class="w3-bar-item w3-button">Details</a>
+  <a href="javascript:void(0)" onclick="w3_closeThree()"
+  class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <style>
+      .image {
+        position: fixed;
+        top: 5%;
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        margin:-60px 0 0 -60px;
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+      }
+      @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+      }
+      @-webkit-keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); } 
+      }
+      @keyframes spin { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform:rotate(360deg); 
+        } 
+      }      
+    </style>
+    <style>
+      .imageTwo {
+        position: fixed;
+        top: 5%;
+        right: 35%;
+        width: 60px;
+        height: 60px;
+        margin:-60px 0 0 -60px;
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+      }
+      @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+      }
+      @-webkit-keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); } 
+      }
+      @keyframes spin { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform:rotate(360deg); 
+        } 
+      }      
+    </style>
+    <img class="image" src="Images/Spinning Tapir.jpg" alt="" width="60" height="60">
+    <img class="imageTwo" src="Images/Spinning Tapir.jpg" alt="" width="60" height="60">
+    <div class="w3-center w3-padding-16">Tapir Time</div>
+  </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<hr id="About">
+
+    <!-- About Section-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="About">
+        <h3>About Tapir Time</h3>
+        <img src="Images/Malayan Tapir.jpg" width="400" height="500" style="width:100%" style="height:100%">
+    </div>
+    <div class="w3-row-padding w3-padding-16 w3-left" id="About">
+        <div class="w3-half">
+            <h3>Tapir Time's Mission</h3>
+            <p>Tapir time is a silly website that is design to bring attention to Tapirs. They are endangered and have been endangered for decades. Almost all of their suffering is due to human trifiling, not because they are ill adjusted to their enviorment. Tapir's have lost habitat due to poaching, climate change, road development, cattle farming, rubber plantations, and palm oil plantations. All of their problems are manmade, and because of our collective inconsideration may end up going extinct in the natural world. </p>
+        </div>
+        <div class="w3-half">
+            <h3>Contacts and Donations:</h3>
+            <p>If you want to know more about Tapir's and how you can help you can contact us at: <br>
+                Email: Tapirinfo@TapirTime.org <br>
+                Phone: 333-333-3333 <br>
+                If you want to donate you can use these links:
+                <p><b><a href="https://tapirs.org/" target="_blank">Tapir Specialist Group</a></b></p>
+                <p><b><a href="https://www.rewild.org/get-to-know/tapirs" target="_blank">Re:Wild</a></b></p>
+                <p><b><a href="https://mountaintapir.com/" target="_blank">Mountain Tapir</a></b></p>
+             </p>
+        </div>
+    </div>
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      window.location.href = "file:///i:/VsCodeStuff/CSSStuff/index.html"
+    }
+       
+    function w3_closeTwo() {
+      window.location.href = "file:///i:/VsCodeStuff/CSSStuff/details.html"
+    }
+       
+    function w3_closeThree() {
+      window.location.href = "file:///i:/VsCodeStuff/CSSStuff/about.html"
+    }
+    function w3_closeFour() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+</body>
+</html>
